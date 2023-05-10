@@ -80,6 +80,8 @@ x = execute/run file
 
 `ls -l` = gives list of permissions for files
 
+`clear` = clears the terminal from text
+
 `exit` = logs out of VM and returns you to the terminal. Alternatively Ctrl + C does the same.
 
 ### Long-hand Changing Permissions:
