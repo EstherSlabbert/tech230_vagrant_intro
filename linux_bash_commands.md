@@ -10,9 +10,11 @@ To zoom in/out Ctrl + scroll or Ctrl + + or Ctrl + -.
 
 '*' = wild card to include all of whatever follows directly after.
 
+#! = shebang
+
 ### Permissions
 
-Permissions are divided into 3 sections: owner of file, group, everyone else.
+Permissions are divided into 3 sections: owner of file (u), group (g), everyone else (o).
 
 Permissions include:
 
@@ -56,6 +58,30 @@ x = execute/run file
 
 `file example.txt` = gives type of file (example: empty)
 
+`head example.txt` = first 10 lines of file; `head -2 example.txt` = first 2 lines
+
+`tail example.txt` = last 10 lines of file; `tail -4 example.txt` = last 4 lines
+
+`sort example.txt` = gives alphabetical/numberical order depending on the first character in line (can use flags with this) (numbers take precedence if no further instructions given)
+
+`nl example.txt` = numbers/enumerates lines (can use flags with this)
+
+`wc example.txt` = gives word count; `wc -l example.txt` =  gives number of lines, (other flags available)
+
+`grep` = search (Error: `grep example.txt` = cannot complete, here is where you would use Ctrl + Z)
+
+`grep hello example.txt` = finds and returns each line with hello in example.txt
+
+`top` = real time processes running + details (q to exit)
+
+`ps` = processes being used by user
+
+`ps aux` = displays snapshot of the most amount of information a user usually needs to understand the current state of their system’s running processes
+
+[More on the ps aux command](https://www.linode.com/docs/guides/use-the-ps-aux-command-in-linux/)
+
+Ctrl + Z = kills command to get back to terminal (like task manager)
+
 `touch puppy.jpeg` = creates .jpeg file
 
 `mv puppy.jpeg puppy.txt` = moves and/ renames files/directories (puppy.jpeg is now puppy.txt)
@@ -83,6 +109,32 @@ x = execute/run file
 `clear` = clears the terminal from text
 
 `exit` = logs out of VM and returns you to the terminal. Alternatively Ctrl + C does the same.
+
+### Piping: |
+
+Used for chaining commands together & to send data to/from files.
+
+`ls | head -3` = shows the first 3 files/directories
+
+`ls | tail -2` = shows last 3 files/directories
+
+`ls | head -3 | tail -1` = gives the 3rd file name only
+
+`cat example.txt | grep hello` = prints out lines that have hello in it
+
+### Processes:
+
+`sleep 120 &` = creates process called sleep running in background for 120 seconds (currently sleep does nothing)
+
+PID (program ID is a number usually 4 long) = ps to get
+
+`kill <PID>` = ends program (can use without sudo if owner of process, otherwise use sudo)
+
+`kill -9 PID` = forcefully ends program
+
+`sleep 5` = takes away control while running as a foreground process (moves to bg by ctrl + z, but this doesn't kill it)
+
+`fg` = brings background process to foreground
 
 ### Long-hand Changing Permissions:
 
