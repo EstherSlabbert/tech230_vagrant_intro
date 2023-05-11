@@ -24,7 +24,7 @@ end
 
 6. Create/Activate/Run the Virtual Machine that your 'Vagrantfile' specifies by entering `vagrant up` in terminal. You should be able to see the running Virtual Machine in VirtualBox. (Note: If at any point you make changes in your 'Vagrantfile' that you want implemented, exit the VM and enter `vagrant reload` in your bash terminal. This command shuts down and restarts VM with added instructions/features in 'Vagrantfile'.)
 ![Running VBox](virtual_box_manager_home_running.png)
-7. To enter the running Virtual Machine, use an SSH key by entering `vagrant ssh` in terminal. Now you are inside your Virtual Machine and your terminal should have the following in your bash terminal: `vagrant@ubuntu-xenial:~$`. (username: vagrant@ubuntu-xenial) (Note:`vagrant ssh` can be used to enter the VM again after it has been exited by using `Ctrl + C` or `exit` in terminal. `vagrant halt` can be used to gracefully shutdown your VM.)
+1. To enter the running Virtual Machine, use an SSH key by entering `vagrant ssh` in terminal. Now you are inside your Virtual Machine and your terminal should have the following in your bash terminal: `vagrant@ubuntu-xenial:~$`. (username: vagrant) (Note:`vagrant ssh` can be used to enter the VM again after it has been exited by using `Ctrl + C` or `exit` in terminal. `vagrant halt` can be used to gracefully shutdown your VM.)
 
 ### Deploying basic html server using Nginx (see 'automation_nginx_deployment.md' to automate this section)
 

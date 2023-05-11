@@ -2,8 +2,8 @@
 
 ## Steps
 
-1. Check 'nginx_deployment.md' for steps in setting your 'Vagrantfile' up if you do not already have an appropriate file from using `vagrant init`.
-2. Create a .ssh file called 'provision.ssh'. Open it and write the following:
+1. Check [nginx_deployment.md](https://github.com/EstherSlabbert/tech230_vagrant_intro/blob/main/nginx_deployment.md) for steps in setting your 'Vagrantfile' up if you do not already have an appropriate file from using `vagrant init`.
+2. Create a .sh file called 'provision.sh'. Open it and write the following:
 ```shell
 #!/bin/bash
 
@@ -36,8 +36,8 @@ end
 
 ## Alternative steps
 
-1. Check 'nginx_deployment.md' for steps in setting your 'Vagrantfile' up if you do not already have an appropriate file from using `vagrant init`.
-2. Open the 'Vagrantfile'. Add the line `config.vm.provision "shell", path: "shell, inline: <<-SHELL"` followed by the relevant instructions shown in the code block below. Save. (If not already done: Remove comments. Change "base" to the name of your desired Operating System. Add an IP. Save.)
+1. Check [nginx_deployment.md](https://github.com/EstherSlabbert/tech230_vagrant_intro/blob/main/nginx_deployment.md) for steps in setting your 'Vagrantfile' up if you do not already have an appropriate file from using `vagrant init`.
+2. Open the 'Vagrantfile'. Add the line `config.vm.provision "shell", path: "shell, inline: <<-SHELL"` followed by the relevant instructions shown in the code block below and `SHELL` again. Save. (If not already done: Remove comments. Change "base" to the name of your desired Operating System. Add an IP. Save.)
 
 Your 'Vagrantfile' should have the following/similar in it:
 ~~~ruby
