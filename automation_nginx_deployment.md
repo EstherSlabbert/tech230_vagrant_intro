@@ -4,18 +4,18 @@
 
 1. Check [nginx_deployment.md](https://github.com/EstherSlabbert/tech230_vagrant_intro/blob/main/nginx_deployment.md) for steps in setting your 'Vagrantfile' up if you do not already have an appropriate file from using `vagrant init`.
 2. Create a .sh file called 'provision.sh'. Open it and write the following:
-```shell
-#!/bin/bash
-
-sudo apt-get update
-
-sudo apt-get upgrade -y
-
-sudo apt-get install nginx -y
-
-sudo systemctl start nginx
-```
-Save the file (preferably in the same directory as your 'Vagrantfile' to make the path easier to find).
+    ```shell
+    #!/bin/bash
+    
+    sudo apt-get update
+    
+    sudo apt-get upgrade -y
+    
+    sudo apt-get install nginx -y
+    
+    sudo systemctl start nginx
+    ```
+    Save the file (preferably in the same directory as your 'Vagrantfile' to make the path easier to find).
 3. Open the 'Vagrantfile'. Add the line `config.vm.provision "shell", path: "provision.sh"`. Save. (If not already done: Remove comments. Change "base" to the name of your desired Operating System. Add an IP. Save.) Your 'Vagrantfile' should have the following/similar in it:
 ~~~ruby
 Vagrant.configure("2") do |config|
